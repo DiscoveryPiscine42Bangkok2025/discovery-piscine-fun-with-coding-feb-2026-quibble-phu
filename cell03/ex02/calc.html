@@ -50,10 +50,10 @@
             const left = parseInt(leftStr);
             const right = parseInt(rightStr);
 
-            if (isNaN(left) || isNaN(right) || left < 0 || right < 0) {
-                alert("Error :(");
-                return; 
-            }
+             if (!/^\d+$/.test(leftStr) || !/^\d+$/.test(rightStr)) {
+                    alert("Error :(");
+                    return;
+                }
 
             if ((op === '/' || op === '%') && right === 0) {
                 alert("It's over 9000!");
