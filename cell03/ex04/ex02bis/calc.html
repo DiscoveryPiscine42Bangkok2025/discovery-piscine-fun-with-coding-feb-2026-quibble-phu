@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator (jQuery)</title>
+    <style>
+        body { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            gap: 10px; 
+        }
+        input, select { 
+            padding: 10px; 
+            font-size: 1.2rem; 
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <input type="text" id="leftMember">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="rightMember">
+    <input type="submit" value="Try me!" id="calculateBtn">
+
+    <script>
+        $(document).ready(function() {
+            
+            setInterval(function() {
+                alert("Please, use me...");
+            }, 30000);
+
+            $('#calculateBtn').click(function() {
+
+                let leftStr = $('#leftMember').val();
+                let rightStr = $('#rightMember').val();
+                let op = $('#operator').val();
+
+                if (!/^\d+$/.test(leftStr) || !/^\d+$/.test(rightStr)) {
+                    alert("Error :(");
+                    return;
+                }
+
+                let left = parseInt(leftStr);
+                let right = parseInt(rightStr);
+
+                if ((op === '/' || op === '%') && right === 0) {
+                    console.log("It's over 9000!");
+                    alert("It's over 9000!");
+                    return;
+                }
+
+                let result = 0;
+                if (op === '+') result = left + right;
+                else if (op === '-') result = left - right;
+                else if (op === '*') result = left * right;
+                else if (op === '/') result = left / right;
+                else if (op === '%') result = left % right;
+
+                console.log(result);
+                alert(result);
+            });
+        });
+    </script>
+</body>
+</html>
