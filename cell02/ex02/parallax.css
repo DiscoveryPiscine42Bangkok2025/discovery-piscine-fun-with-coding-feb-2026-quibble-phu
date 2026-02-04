@@ -1,0 +1,44 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.parallax-1, .parallax-2 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    will-change: transform; 
+}
+
+
+.parallax-1 {
+    background-image: url(anime-moon-landscape_23-2151645871.avif);
+}
+
+
+.parallax-2 {
+    background-image: url(set-torii-gates-water_52683-44986.avif);
+}
+
+
+.static-block {
+    height: 100%; 
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.center-text {
+    color: black;
+    font-size: 10px;
+}
