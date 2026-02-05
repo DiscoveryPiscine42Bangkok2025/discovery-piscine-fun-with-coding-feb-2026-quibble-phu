@@ -1,44 +1,39 @@
 body, html {
     height: 100%;
     margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
 }
 
-.parallax-1, .parallax-2 {
+.parallax {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    will-change: transform; 
+    height: 100%;
+    position: relative;
 }
 
-
-.parallax-1 {
-    background-image: url(anime-moon-landscape_23-2151645871.avif);
+.img1 {
+    background-image: url('photo-1472214103451-9374bd1c798e.jpeg'); 
 }
 
-
-.parallax-2 {
-    background-image: url(set-torii-gates-water_52683-44986.avif);
+.img2 {
+    background-image: url('photo-1506744038136-46273834b3fb.jpeg');
 }
 
-
-.static-block {
-    height: 100%; 
-    background-color: black;
-    color: white;
-    font-size: 10px;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
 }
 
-
-.center-text {
-    color: black;
-    font-size: 10px;
+.text-block {
+    color: #ddd;
+    background-color: #000; 
+    text-align: center;
+    padding: 50px 80px;
 }
