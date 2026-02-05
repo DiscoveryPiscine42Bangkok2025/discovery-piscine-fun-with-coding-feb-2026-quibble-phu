@@ -1,0 +1,141 @@
+:root {
+            --neon-pink: #ff007f;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-light: #f0f0f0;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth; 
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--neon-pink);
+            border-radius: 5px;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+        
+        .text-pink {
+            color: var(--neon-pink) !important;
+        }
+
+        .neon-text {
+            text-shadow: 0 0 10px rgba(255, 0, 127, 0.7);
+        }
+
+        .navbar {
+            background-color: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 0, 127, 0.2);
+        }
+        
+        .nav-link {
+            color: #fff !important;
+            transition: all 0.3s ease;
+            position: relative;
+            
+        }
+
+        .nav-link:hover {
+            color: var(--neon-pink) !important;
+            text-shadow: 0 0 8px var(--neon-pink);
+        }
+
+        #about {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #000000 0%, #1a0510 100%);
+        }
+
+        .profile-img-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--neon-pink);
+            box-shadow: 0 0 20px var(--neon-pink), inset 0 0 20px var(--neon-pink);
+            transition: transform 0.5s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        .btn-neon {
+            background-color: transparent;
+            border: 2px solid var(--neon-pink);
+            color: var(--neon-pink);
+            padding: 10px 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
+        }
+
+        .btn-neon:hover {
+            background-color: var(--neon-pink);
+            color: #fff;
+            box-shadow: 0 0 20px var(--neon-pink);
+            transform: translateY(-3px);
+        }
+
+        .custom-card {
+            background-color: var(--card-bg);
+            border: none;
+            border-left: 3px solid var(--neon-pink);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-10px);
+            background-color: #2a2a2a;
+            box-shadow: 0 10px 30px rgba(255, 0, 127, 0.15);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--neon-pink);
+            margin-bottom: 1rem;
+        }
+
+        #contact {
+            background-color: #000;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .social-icon {
+            font-size: 2rem;
+            color: #fff;
+            margin: 0 15px;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            color: var(--neon-pink);
+            transform: scale(1.2);
+            text-shadow: 0 0 15px var(--neon-pink);
+        }
+
+       
